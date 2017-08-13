@@ -10,6 +10,6 @@ pom.xml.asc
 /.nrepl-port
 /.dir-locals.el
 /profiles.clj
-/dev/resources/local.edn
-/dev/src/local.clj
+#/dev/resources/local.edn
+#/dev/src/local.clj
 /db/dev.sqlite

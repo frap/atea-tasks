@@ -9,7 +9,7 @@
   (ig/init-key :duct2.handler/example {}))
 
 (deftest smoke-test
-  (testing "example page exists"
+  (testing "task page exists"
     (-> (session handler)
-        (visit "/example")
+        (visit "/hello")
         (has (status? 200) "page exists"))))
