@@ -1,0 +1,13 @@
+{:duct.core/project-ns  duct2
+ :duct.core/environment :production
+
+ :duct.module/logging {}
+ :duct.module.web/site {}
+ :duct.module/sql {}
+ :duct.module/cljs {:main duct2.client}
+
+ :duct.router/cascading
+ [#ig/ref :duct2.handler/example]
+
+ :duct2.handler/example
+ {:db #ig/ref :duct.database/sql}}

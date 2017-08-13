@@ -1,0 +1,14 @@
+{:duct.core/environment :development
+ :duct.core/include ["duct2/config"]
+
+ :duct.module/sql
+ {:database-url "jdbc:sqlite:db/dev.sqlite"}
+
+ :duct.migrator/ragtime
+ {:migrations [#ig/ref :atea.migration/create-todos]}
+
+[:duct.migrator.ragtime/sql :atea.migration/create-todos]
+{:up   ["CREATE TABLE todos (id INTEGER PRIMARY KEY, todo TEXT, tag TEXT, completed BOOLEAN, priority INTEGER)"]
+ :down ["DROP TABLE todos"]}
+
+ }
